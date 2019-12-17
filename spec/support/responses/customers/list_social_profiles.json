@@ -1,0 +1,28 @@
+{
+  "_embedded" : {
+    "social-profiles" : [ {
+      "id" : 1,
+      "value" : "https://twitter.com/helpscout",
+      "type" : "twitter",
+      "_links" : {
+        "self" : {
+          "href" : "..."
+        }
+      }
+    }, {
+      "id" : 2,
+      "value" : "https://plus.google.com/+HelpscoutNet",
+      "type" : "googleplus",
+      "_links" : {
+        "self" : {
+          "href" : "..."
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "..."
+    }
+  }
+}

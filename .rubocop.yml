@@ -1,0 +1,15 @@
+AllCops:
+  Exclude:
+    - '**/Gemfile'
+    - '**/helpscout.gemspec'
+
+Metrics/BlockLength:
+  Enabled: false
+Metrics/LineLength:
+  Max: 100
+Metrics/MethodLength:
+  Enabled: false
+Style/BlockDelimiters:
+  Enabled: false
+Style/Documentation:
+  Enabled: false

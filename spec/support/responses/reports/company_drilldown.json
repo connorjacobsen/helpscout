@@ -1,0 +1,29 @@
+{
+  "conversations" : {
+    "pages" : 157,
+    "page" : 1,
+    "count" : 1561,
+    "results" : [ {
+      "id" : 583,
+      "number" : 12345,
+      "type" : "email",
+      "mailboxid" : 2,
+      "attachments" : false,
+      "subject" : "Sample subject",
+      "status" : "active",
+      "threadCount" : 6,
+      "preview" : "This is a preview...",
+      "customerName" : "John Smith",
+      "customerEmail" : "john@example.com",
+      "customerIds" : [ 2 ],
+      "modifiedAt" : "2015-04-24T18:59:49Z",
+      "assignedid" : 4,
+      "tags" : [ {
+        "id" : 123,
+        "name" : "sample-tag",
+        "color" : "none"
+      } ],
+      "assignedName" : "Mary Jones"
+    } ]
+  }
+}

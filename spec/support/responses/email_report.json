@@ -1,0 +1,134 @@
+{
+  "filterTags" : [ {
+    "id" : 100,
+    "name" : "vip"
+  } ],
+  "current" : {
+    "startDate" : "2015-01-01T00:00:00Z",
+    "endDate" : "2015-01-31T23:59:59Z",
+    "volume" : {
+      "emailConversations" : 8,
+      "emailsCreated" : 5,
+      "repliesSent" : 24,
+      "messagesReceived" : 40
+    },
+    "resolutions" : {
+      "resolved" : 10,
+      "resolvedOnFirstReply" : 1,
+      "percentResolvedOnFirstReply" : 0.1,
+      "resolutionTime" : 20.5,
+      "repliesToResolve" : 17.0,
+      "handleTime" : 129,
+      "closed" : 20
+    },
+    "responses" : {
+      "responseTime" : 1023,
+      "firstResponseTime" : 500
+    }
+  },
+  "previous" : {
+    "startDate" : "2015-01-01T00:00:00Z",
+    "endDate" : "2015-01-31T23:59:59Z",
+    "volume" : {
+      "emailConversations" : 7,
+      "emailsCreated" : 4,
+      "repliesSent" : 14,
+      "messagesReceived" : 20
+    },
+    "resolutions" : {
+      "resolved" : 11,
+      "resolvedOnFirstReply" : 140,
+      "percentResolvedOnFirstReply" : 0.2,
+      "resolutionTime" : 20.4,
+      "repliesToResolve" : 7.0,
+      "handleTime" : 110,
+      "closed" : 19
+    },
+    "responses" : {
+      "responseTime" : 1021,
+      "firstResponseTime" : 300
+    }
+  },
+  "deltas" : {
+    "volume" : {
+      "emailConversations" : 639.2,
+      "emailsCreated" : 865.0602,
+      "repliesSent" : 402.4922,
+      "messagesReceived" : 245.098
+    },
+    "resolutions" : {
+      "resolved" : -15.0,
+      "resolvedOnFirstReply" : 3.8235,
+      "resolutionTime" : -99.3841,
+      "repliesToResolve" : 45.6583,
+      "handleTime" : -45.5696,
+      "closed" : -40.678
+    },
+    "responses" : {
+      "responseTime" : -99.0912,
+      "firstResponseTime" : -99.085
+    }
+  },
+  "responseTime" : {
+    "count" : 1,
+    "previousCount" : 14,
+    "ranges" : [ {
+      "id" : 10,
+      "count" : 1,
+      "percent" : 100.0,
+      "previousCount" : 12,
+      "previousPercent" : 85
+    } ]
+  },
+  "handleTime" : {
+    "count" : 1,
+    "previousCount" : 14,
+    "ranges" : [ {
+      "id" : 1,
+      "count" : 1,
+      "percent" : 100.0,
+      "previousCount" : 14,
+      "previousPercent" : 100
+    } ]
+  },
+  "firstResponseTime" : {
+    "count" : 1,
+    "previousCount" : 14,
+    "ranges" : [ {
+      "id" : 10,
+      "count" : 1,
+      "percent" : 100.0,
+      "previousCount" : 12,
+      "previousPercent" : 85
+    } ]
+  },
+  "resolutionTime" : {
+    "count" : 17,
+    "previousCount" : 20,
+    "ranges" : [ {
+      "id" : 1,
+      "count" : 12,
+      "percent" : 70.588234,
+      "previousCount" : 5,
+      "previousPercent" : 25
+    }, {
+      "id" : 3,
+      "count" : 2,
+      "percent" : 11.764706,
+      "previousCount" : 1,
+      "previousPercent" : 5
+    } ]
+  },
+  "repliesToResolve" : {
+    "count" : 1,
+    "previousCount" : 14,
+    "ranges" : [ {
+      "id" : 2,
+      "count" : 1,
+      "percent" : 100.0,
+      "previousCount" : 4,
+      "previousPercent" : 28,
+      "resolutionTime" : 2278004
+    } ]
+  }
+}

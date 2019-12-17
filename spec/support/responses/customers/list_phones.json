@@ -1,0 +1,28 @@
+{
+  "_embedded" : {
+    "phones" : [ {
+      "id" : 1,
+      "value" : "222-333-4444",
+      "type" : "work",
+      "_links" : {
+        "self" : {
+          "href" : "..."
+        }
+      }
+    }, {
+      "id" : 2,
+      "value" : "333-4444-5555",
+      "type" : "mobile",
+      "_links" : {
+        "self" : {
+          "href" : "..."
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "..."
+    }
+  }
+}

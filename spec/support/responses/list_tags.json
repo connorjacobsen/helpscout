@@ -1,0 +1,41 @@
+{
+  "_embedded" : {
+    "tags" : [ {
+      "id" : 123456793,
+      "slug" : "dark-side",
+      "name" : "Dark Side",
+      "color" : "green",
+      "createdAt" : "2010-02-10T09:00:00Z",
+      "ticketCount" : 5
+    }, {
+      "id" : 123456794,
+      "slug" : "the-other-side",
+      "name" : "The other side",
+      "color" : "green",
+      "createdAt" : "2010-02-10T09:00:00Z",
+      "updatedAt" : "2010-02-10T10:37:00Z",
+      "ticketCount" : 2
+    } ]
+  },
+  "_links" : {
+    "first" : {
+      "href" : "..."
+    },
+    "last" : {
+      "href" : "..."
+    },
+    "page" : {
+      "href" : "...",
+      "templated" : true
+    },
+    "self" : {
+      "href" : "..."
+    }
+  },
+  "page" : {
+    "size" : 50,
+    "totalElements" : 2,
+    "totalPages" : 1,
+    "number" : 1
+  }
+}

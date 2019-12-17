@@ -1,0 +1,99 @@
+{
+  "id" : 123,
+  "number" : 12,
+  "threads" : 2,
+  "type" : "email",
+  "folderId" : 11,
+  "status" : "closed",
+  "state" : "published",
+  "subject" : "Help",
+  "preview" : "Preview",
+  "mailboxId" : 13,
+  "assignee" : {
+    "id" : 99,
+    "type" : "user",
+    "first" : "Mr",
+    "last" : "Robot",
+    "email" : "none@nowhere.com"
+  },
+  "createdBy" : {
+    "id" : 12,
+    "type" : "customer",
+    "email" : "bear@acme.com"
+  },
+  "createdAt" : "2012-03-15T22:46:22Z",
+  "closedBy" : 14,
+  "closedByUser" : {
+    "id" : 14,
+    "type" : "user",
+    "first" : "Clo",
+    "last" : "Ser",
+    "photoUrl" : "pic.jpg",
+    "email" : "closer@closers.com"
+  },
+  "closedAt" : "2012-03-16T14:07:23Z",
+  "userUpdatedAt" : "2012-03-16T14:07:23Z",
+  "customerWaitingSince" : {
+    "time" : "2012-07-24T20:18:33Z",
+    "friendly" : "20 hours ago",
+    "latestReplyFrom" : "customer"
+  },
+  "source" : {
+    "type" : "email",
+    "via" : "customer"
+  },
+  "tags" : [ {
+    "id" : 9150,
+    "color" : "#929499",
+    "tag" : "vip"
+  } ],
+  "cc" : [ "bear@normal.com" ],
+  "bcc" : [ "bear@secret.com" ],
+  "primaryCustomer" : {
+    "id" : 238604,
+    "type" : "customer",
+    "first" : "Rob",
+    "last" : "Robertovic",
+    "email" : "rob@acme.com"
+  },
+  "customFields" : [ {
+    "id" : 8,
+    "name" : "Account Type",
+    "value" : "8518",
+    "text" : "Free"
+  }, {
+    "id" : 6688,
+    "name" : "Account Status",
+    "value" : "33077",
+    "text" : "Trial"
+  } ],
+  "_embedded" : {
+    "threads" : [ ]
+  },
+  "_links" : {
+    "assignee" : {
+      "href" : "..."
+    },
+    "closedBy" : {
+      "href" : "..."
+    },
+    "createdByCustomer" : {
+      "href" : "..."
+    },
+    "mailbox" : {
+      "href" : "..."
+    },
+    "primaryCustomer" : {
+      "href" : "..."
+    },
+    "self" : {
+      "href" : "..."
+    },
+    "threads" : {
+      "href" : "..."
+    },
+    "web" : {
+      "href" : "..."
+    }
+  }
+}

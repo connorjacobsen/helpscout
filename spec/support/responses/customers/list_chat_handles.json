@@ -1,0 +1,28 @@
+{
+  "_embedded" : {
+    "chats" : [ {
+      "id" : 1,
+      "value" : "jsprout",
+      "type" : "aim",
+      "_links" : {
+        "self" : {
+          "href" : "..."
+        }
+      }
+    }, {
+      "id" : 2,
+      "value" : "54831190",
+      "type" : "icq",
+      "_links" : {
+        "self" : {
+          "href" : "..."
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "..."
+    }
+  }
+}

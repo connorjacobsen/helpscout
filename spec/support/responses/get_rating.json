@@ -1,0 +1,39 @@
+{
+  "id" : 1,
+  "customer" : {
+    "id" : 500,
+    "email" : "customer@acme.com",
+    "firstName" : "Happy",
+    "lastName" : "Customer",
+    "photoUrl" : "http://twitter.com/img/some-avatar.jpg"
+  },
+  "threadId" : 10,
+  "conversationId" : 123,
+  "mailboxId" : 85,
+  "rating" : "great",
+  "user" : {
+    "id" : 11,
+    "email" : "bear@acme.com",
+    "firstName" : "Vernon",
+    "lastName" : "Bear"
+  },
+  "comments" : "Well done!",
+  "createdAt" : "2017-12-12T12:12:13",
+  "_links" : {
+    "conversation" : {
+      "href" : "..."
+    },
+    "customer" : {
+      "href" : "..."
+    },
+    "mailbox" : {
+      "href" : "..."
+    },
+    "self" : {
+      "href" : "..."
+    },
+    "user" : {
+      "href" : "..."
+    }
+  }
+}

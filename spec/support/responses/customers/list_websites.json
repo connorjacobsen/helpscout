@@ -1,0 +1,26 @@
+{
+  "_embedded" : {
+    "websites" : [ {
+      "id" : 1,
+      "value" : "https://github.com",
+      "_links" : {
+        "self" : {
+          "href" : "..."
+        }
+      }
+    }, {
+      "id" : 2,
+      "value" : "http://www.somewhere.com",
+      "_links" : {
+        "self" : {
+          "href" : "..."
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "..."
+    }
+  }
+}

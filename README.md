@@ -1,8 +1,6 @@
 # Helpscout
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/helpscout`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Ruby client for the HelpScout Mailbox API v2.
 
 ## Installation
 
@@ -22,7 +20,49 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Configure the library:
+
+```ruby
+HelpScout.client_id = 'your-client-id'
+HelpScout.client_secret = 'your-client-secret'
+```
+
+## Progress
+
+| Models                        | List | Get | Create | Update | Delete |
+| :---------------------------- | :--: | :-: | :----: | :----: | :----: |
+| Conversations                 |  ✅  | ✅  |   ✅   |   ✅   |   ✅   |
+| Conversations::Attachment     |  ➖  | ✅  |   ✅   |   ➖   |   ✅   |
+| Conversations::Fields         |  ➖  | ➖  |   ➖   |   ✅   |   ➖   |
+| Conversations::Tags           |  ➖  | ➖  |   ➖   |   ✅   |   ➖   |
+| Conversation::Threads         |  ✅  | ➖  |   ➖   |   ✅   |   ➖   |
+| Conversation::Notes           |  ➖  | ➖  |   ✅   |   ➖   |   ➖   |
+| Conversation::ChatThreads     |  ➖  | ➖  |   ✅   |   ➖   |   ➖   |
+| Conversation::CustomerThreads |  ➖  | ➖  |   ✅   |   ➖   |   ➖   |
+| Conversation::PhoneThreads    |  ➖  | ➖  |   ✅   |   ➖   |   ➖   |
+| Customers                     |  ✅  | ✅  |   ✅   |   ✅   |   ➖   |
+| Customers::Address            |  ➖  | ✅  |   ✅   |   ✅   |   ✅   |
+| Customers::ChatHandles        |  ✅  | ➖  |   ✅   |   ✅   |   ✅   |
+| Customers::Emails             |  ✅  | ➖  |   ✅   |   ✅   |   ✅   |
+| Customers::Phones             |  ✅  | ➖  |   ✅   |   ✅   |   ✅   |
+| Customers::SocialProfiles     |  ✅  | ➖  |   ✅   |   ✅   |   ✅   |
+| Customers::Websites           |  ✅  | ➖  |   ✅   |   ✅   |   ✅   |
+| Mailboxes                     |  ✅  | ✅  |   ➖   |   ➖   |   ➖   |
+| Mailbox::Folders              |  ✅  | ➖  |   ➖   |   ➖   |   ➖   |
+| Mailbox::Fields               |  ✅  | ➖  |   ➖   |   ➖   |   ➖   |
+| Ratings                       |  ➖  | ✅  |   ➖   |   ➖   |   ➖   |
+| Tags                          |  ✅  | ➖  |   ➖   |   ➖   |   ➖   |
+| Teams                         |  ✅  | ➖  |   ➖   |   ➖   |   ➖   |
+| Team::Members                 |  ✅  | ➖  |   ➖   |   ➖   |   ➖   |
+| Users                         |  ✅  | ✅  |   ➖   |   ➖   |   ➖   |
+| Users::ResourceOwners         |  ➖  | ✅  |   ➖   |   ➖   |   ➖   |
+| Webhooks                      |  ✅  | ✅  |   ✅   |   ✅   |   ✅   |
+| Workflows                     |  ✅  | ➖  |   ➖   |   ✅   |   ➖   |
+
+| Endpoint | Supported |
+| -------- | :-------: |
+| Reports  |    ❌     |
+| Search   |    ❌     |
 
 ## Development
 

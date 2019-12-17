@@ -1,0 +1,12 @@
+{
+  "city" : "Dallas",
+  "lines" : [ "123 West Main St", "Suite 123" ],
+  "state" : "TX",
+  "postalCode" : "74206",
+  "country" : "US",
+  "_links" : {
+    "self" : {
+      "href" : "..."
+    }
+  }
+}

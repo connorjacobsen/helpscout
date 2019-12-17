@@ -1,0 +1,19 @@
+{
+  "id" : 1,
+  "name" : "Help Scout",
+  "slug" : "83ebc5d87292a795",
+  "email" : "bearbox@acme.com",
+  "createdAt" : "2013-06-05T09:17:15Z",
+  "updatedAt" : "2016-11-11T12:20:39Z",
+  "_links" : {
+    "fields" : {
+      "href" : "..."
+    },
+    "folders" : {
+      "href" : "..."
+    },
+    "self" : {
+      "href" : "..."
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "_embedded" : {
+    "emails" : [ {
+      "id" : 1,
+      "value" : "dasilva@football.com",
+      "type" : "work",
+      "_links" : {
+        "self" : {
+          "href" : "..."
+        }
+      }
+    }, {
+      "id" : 2,
+      "value" : "dasilva@football.com",
+      "type" : "mobile",
+      "_links" : {
+        "self" : {
+          "href" : "..."
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "..."
+    }
+  }
+}

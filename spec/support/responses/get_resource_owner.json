@@ -1,0 +1,23 @@
+{
+  "id" : 4,
+  "firstName" : "Vernon",
+  "lastName" : "Bear",
+  "email" : "bear@acme.com",
+  "role" : "owner",
+  "timezone" : "America/New_York",
+  "photoUrl" : "http://somesite.com/images/avatar.jpg",
+  "createdAt" : "2011-04-01T03:18:33Z",
+  "updatedAt" : "2012-07-24T20:18:33Z",
+  "type" : "user",
+  "mention" : "vernon",
+  "initials" : "VB",
+  "jobTitle" : "Honey Master",
+  "phone" : "555-2368",
+  "alternateEmails" : [ "bear@forest.com" ],
+  "companyId" : 1,
+  "_links" : {
+    "self" : {
+      "href" : "..."
+    }
+  }
+}

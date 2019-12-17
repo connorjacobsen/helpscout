@@ -1,0 +1,62 @@
+{
+  "_embedded" : {
+    "mailboxes" : [ {
+      "id" : 1,
+      "name" : "Help Scout",
+      "slug" : "83ebc5d87292a795",
+      "email" : "bearbox@acme.com",
+      "createdAt" : "2013-06-05T09:17:15Z",
+      "updatedAt" : "2016-11-11T12:20:39Z",
+      "_links" : {
+        "fields" : {
+          "href" : "..."
+        },
+        "folders" : {
+          "href" : "..."
+        },
+        "self" : {
+          "href" : "..."
+        }
+      }
+    }, {
+      "id" : 2,
+      "name" : "Help Pioneer",
+      "slug" : "83ebc5d87292a795",
+      "email" : "pioneer@acme.com",
+      "createdAt" : "2013-06-05T09:17:15Z",
+      "updatedAt" : "2016-11-11T12:20:39Z",
+      "_links" : {
+        "fields" : {
+          "href" : "..."
+        },
+        "folders" : {
+          "href" : "..."
+        },
+        "self" : {
+          "href" : "..."
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "first" : {
+      "href" : "..."
+    },
+    "last" : {
+      "href" : "..."
+    },
+    "page" : {
+      "href" : "...",
+      "templated" : true
+    },
+    "self" : {
+      "href" : "..."
+    }
+  },
+  "page" : {
+    "size" : 50,
+    "totalElements" : 2,
+    "totalPages" : 1,
+    "number" : 1
+  }
+}

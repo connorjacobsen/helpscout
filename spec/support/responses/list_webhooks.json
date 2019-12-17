@@ -1,0 +1,37 @@
+{
+  "_embedded" : {
+    "webhooks" : [ {
+      "id" : 10,
+      "url" : "http://bad-url.com",
+      "state" : "enabled",
+      "events" : [ "convo.assigned" ],
+      "notification" : false,
+      "_links" : {
+        "self" : {
+          "href" : "..."
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "first" : {
+      "href" : "..."
+    },
+    "last" : {
+      "href" : "..."
+    },
+    "page" : {
+      "href" : "...",
+      "templated" : true
+    },
+    "self" : {
+      "href" : "..."
+    }
+  },
+  "page" : {
+    "size" : 50,
+    "totalElements" : 1,
+    "totalPages" : 1,
+    "number" : 1
+  }
+}

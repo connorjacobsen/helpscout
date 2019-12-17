@@ -1,0 +1,40 @@
+{
+  "_embedded" : {
+    "workflows" : [ {
+      "id" : 1234,
+      "mailboxId" : 100,
+      "type" : "manual",
+      "status" : "active",
+      "order" : 1,
+      "name" : "Mine",
+      "createdAt" : "2012-07-24T20:13:12Z",
+      "modifiedAt" : "2012-07-24T20:18:33Z",
+      "_links" : {
+        "self" : {
+          "href" : "..."
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "first" : {
+      "href" : "..."
+    },
+    "last" : {
+      "href" : "..."
+    },
+    "page" : {
+      "href" : "...",
+      "templated" : true
+    },
+    "self" : {
+      "href" : "..."
+    }
+  },
+  "page" : {
+    "size" : 50,
+    "totalElements" : 1,
+    "totalPages" : 1,
+    "number" : 1
+  }
+}
