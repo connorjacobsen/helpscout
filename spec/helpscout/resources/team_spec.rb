@@ -1,10 +1,13 @@
 # frozen_string_literal: true
 
 RSpec.describe HelpScout::Team do
-  it_behaves_like 'listable' do
+  it_behaves_like 'listable', filterable: true do
     let(:count) { 1 }
     let(:response_body) { ResponseLoader.load_json('list_teams') }
     let(:first_id) { 4 }
+    let(:filters) do
+      { page: 2 }
+    end
   end
 
   describe '.list_members' do
@@ -21,9 +24,9 @@ RSpec.describe HelpScout::Team do
     let(:id) { 10 }
     let(:response_body) { ResponseLoader.load_json('list_team_members') }
 
-    before { allow(Faraday::Connection).to receive(:new).and_return(conn) }
+    before do
+      allow(Faraday::Connection).to receive(:new).and_return(conn)
 
-    it 'lists team members' do
       stubs.get('/v2/oauth2/token') do
         [
           200,
@@ -31,7 +34,9 @@ RSpec.describe HelpScout::Team do
           ResponseLoader.load_json('auth_token')
         ]
       end
+    end
 
+    it 'lists team members' do
       stubs.get("/v2/teams/#{id}/members") do
         [
           200,
@@ -41,6 +46,20 @@ RSpec.describe HelpScout::Team do
       end
 
       outcome = described_class.list_members(id)
+      expect(outcome).to be_success
+      expect(outcome.result.first).to be_a(HelpScout::User)
+    end
+
+    it 'allows filters' do
+      stubs.get("/v2/teams/#{id}/members?page=2") do
+        [
+          200,
+          { 'content-type' => 'application/hal+json;charset=UTF-8' },
+          response_body
+        ]
+      end
+
+      outcome = described_class.list_members(id, page: 2)
       expect(outcome).to be_success
       expect(outcome.result.first).to be_a(HelpScout::User)
     end

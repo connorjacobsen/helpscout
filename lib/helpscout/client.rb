@@ -27,7 +27,7 @@ module HelpScout
         # These methods replace the connection's previous values.
         req.headers = @connection.headers.merge(headers)
 
-        req.params = params if method == :get
+        req.params = params if method == :get && !params.empty?
 
         if %i[post put patch].include?(method) && params && params != {}
           encoded_body = JSON.generate(params)

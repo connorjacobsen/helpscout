@@ -6,10 +6,16 @@ RSpec.describe HelpScout::User do
     let(:response_body) { ResponseLoader.load_json('get_user') }
   end
 
-  it_behaves_like 'listable' do
+  it_behaves_like 'listable', filterable: true do
     let(:count) { 1 }
     let(:response_body) { ResponseLoader.load_json('list_users') }
     let(:first_id) { 4 }
+    let(:filters) do
+      {
+        email: 'bear@acme.com',
+        mailbox: 123
+      }
+    end
   end
 
   describe '.resource_owner' do

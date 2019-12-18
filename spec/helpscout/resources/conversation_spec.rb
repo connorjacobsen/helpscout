@@ -6,10 +6,16 @@ RSpec.describe HelpScout::Conversation do
     let(:response_body) { ResponseLoader.load_json('get_conversation') }
   end
 
-  it_behaves_like 'listable' do
+  it_behaves_like 'listable', filterable: true do
     let(:count) { 1 }
     let(:response_body) { ResponseLoader.load_json('list_conversations') }
     let(:first_id) { 10 }
+    let(:filters) do
+      {
+        mailbox: 123,
+        status: 'closed'
+      }
+    end
   end
 
   it_behaves_like 'creatable' do
