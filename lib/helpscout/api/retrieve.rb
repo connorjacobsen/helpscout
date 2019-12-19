@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-module HelpScout
+module Helpscout
   module API
     module Retrieve
       module ClassMethods
         def retrieve(id, params = {}, opts = {})
           r, _opts = request(:get, "#{resource_url}/#{id}", params, opts)
-          HelpScout::Response.new(r, object: self::OBJECT_NAME)
+          Helpscout::Response.new(r, object: self::OBJECT_NAME)
         end
       end
 

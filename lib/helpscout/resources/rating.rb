@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module HelpScout
-  class Rating < HelpScout::Resource
-    include HelpScout::API::Retrieve
+module Helpscout
+  class Rating < Helpscout::Resource
+    include Helpscout::API::Retrieve
 
     OBJECT_NAME = 'rating'
   end

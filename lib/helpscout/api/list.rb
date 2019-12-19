@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-module HelpScout
+module Helpscout
   module API
     module List
       module ClassMethods
         def list(params = {}, opts = {})
           r, _opts = request(:get, resource_url, params, opts)
-          HelpScout::Response.new(r, is_list: true, object: self::OBJECT_NAME)
+          Helpscout::Response.new(r, is_list: true, object: self::OBJECT_NAME)
         end
       end
 

@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module HelpScout
-  class Tag < HelpScout::Resource
-    include HelpScout::API::List
+module Helpscout
+  class Tag < Helpscout::Resource
+    include Helpscout::API::List
 
     OBJECT_NAME = 'tag'
   end

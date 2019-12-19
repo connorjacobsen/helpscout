@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-RSpec.describe HelpScout::Object do
+RSpec.describe Helpscout::Object do
   describe '.from' do
     it 'initializes properly' do
       data = {
         id: 1,
-        name: 'HelpScout',
+        name: 'Helpscout',
         slug: 'fab6de7f13aab712',
         email: 'contact@helpscout.net',
         createdAt: '2019-08-25T13:18:48Z',

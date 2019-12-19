@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-module HelpScout
-  class Foo < HelpScout::Resource
+module Helpscout
+  class Foo < Helpscout::Resource
     OBJECT_NAME = 'foo'
   end
 end
 
-RSpec.describe HelpScout::Resource do
-  let(:resource) { HelpScout::Foo }
+RSpec.describe Helpscout::Resource do
+  let(:resource) { Helpscout::Foo }
 
   describe '.class_name' do
     it 'returns the proper class name' do

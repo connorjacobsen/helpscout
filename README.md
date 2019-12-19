@@ -1,6 +1,6 @@
 # Helpscout
 
-Ruby client for the HelpScout Mailbox API v2.
+Ruby client for the Helpscout Mailbox API v2.
 
 ## Installation
 
@@ -23,8 +23,8 @@ Or install it yourself as:
 Configure the library:
 
 ```ruby
-HelpScout.client_id = 'your-client-id'
-HelpScout.client_secret = 'your-client-secret'
+Helpscout.client_id = 'your-client-id'
+Helpscout.client_secret = 'your-client-secret'
 ```
 
 ## Progress

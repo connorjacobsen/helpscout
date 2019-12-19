@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-module HelpScout
-  class Mailbox < HelpScout::Resource
-    include HelpScout::API::List
-    include HelpScout::API::Retrieve
-    include HelpScout::API::NestedResource
+module Helpscout
+  class Mailbox < Helpscout::Resource
+    include Helpscout::API::List
+    include Helpscout::API::Retrieve
+    include Helpscout::API::NestedResource
 
     OBJECT_NAME = 'mailbox'
 
@@ -15,10 +15,10 @@ module HelpScout
 
     nested_resource_class_methods :folder,
                                   operations: %i[list],
-                                  object_name: HelpScout::MailboxFolder::OBJECT_NAME
+                                  object_name: Helpscout::MailboxFolder::OBJECT_NAME
 
     nested_resource_class_methods :field,
                                   operations: %i[list],
-                                  object_name: HelpScout::MailboxField::OBJECT_NAME
+                                  object_name: Helpscout::MailboxField::OBJECT_NAME
   end
 end

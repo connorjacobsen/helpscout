@@ -6,12 +6,12 @@ require 'helpscout/version'
 GITHUB_URL = 'https://github.com/connorjacobsen/helpscout'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'helpscout'
-  spec.version       = HelpScout::VERSION
+  spec.name          = 'helpscout-api'
+  spec.version       = Helpscout::VERSION
   spec.authors       = ['Connor Jacobsen']
   spec.email         = ['jacobsen.connor@gmail.com']
 
-  spec.summary       = 'Ruby client for the HelpScout Mailbox API 2.0'
+  spec.summary       = 'Ruby client for the Helpscout Mailbox API 2.0'
   spec.homepage      = GITHUB_URL
   spec.license       = 'MIT'
 

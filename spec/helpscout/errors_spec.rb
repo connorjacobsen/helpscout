@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe HelpScout::Errors do
+RSpec.describe Helpscout::Errors do
   let(:log_ref) { SecureRandom.uuid }
   let(:message) { 'Bad request' }
   let(:data) do

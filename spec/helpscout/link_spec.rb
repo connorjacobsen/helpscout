@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe HelpScout::Link do
+RSpec.describe Helpscout::Link do
   let(:href) { 'https://api.helpscout.net/v2/conversations/281801848' }
 
   it 'initializes properly' do

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe HelpScout::Workflow do
+RSpec.describe Helpscout::Workflow do
   it_behaves_like 'listable', filterable: true do
     let(:count) { 1 }
     let(:response_body) { ResponseLoader.load_json('list_workflows') }

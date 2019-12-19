@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module HelpScout
+module Helpscout
   class Error < StandardError; end
   class ClientError < Error; end
 

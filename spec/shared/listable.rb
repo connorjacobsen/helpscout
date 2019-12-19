@@ -5,7 +5,7 @@ RSpec.shared_examples_for 'listable' do |filterable: false|
   let(:stubs) { Faraday::Adapter::Test::Stubs.new }
   let(:conn) { Faraday.new { |b| b.adapter(:test, stubs) } }
   let(:client) do
-    HelpScout::Client.new(
+    Helpscout::Client.new(
       client_id: 'client-id',
       client_secret: 'client-secret',
       cache: nil,
@@ -38,7 +38,7 @@ RSpec.shared_examples_for 'listable' do |filterable: false|
     expect(outcome).to be_success
 
     results = outcome.result
-    expect(results).to be_a(HelpScout::ListObject)
+    expect(results).to be_a(Helpscout::ListObject)
     expect(results.first).to be_a(described_class)
     expect(results.first.id).to eq(first_id)
   end
@@ -59,7 +59,7 @@ RSpec.shared_examples_for 'listable' do |filterable: false|
       expect(outcome).to be_success
 
       results = outcome.result
-      expect(results).to be_a(HelpScout::ListObject)
+      expect(results).to be_a(Helpscout::ListObject)
       expect(results.first).to be_a(described_class)
       expect(results.first.id).to eq(first_id)
     end

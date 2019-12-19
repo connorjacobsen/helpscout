@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-class CacheImpl < HelpScout::Cache
+class CacheImpl < Helpscout::Cache
   public_class_method :new
 end
 
-RSpec.describe HelpScout::Cache do
+RSpec.describe Helpscout::Cache do
   it 'can not be instantiated' do
     expect {
       described_class.new

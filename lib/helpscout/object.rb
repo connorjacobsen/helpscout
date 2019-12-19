@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module HelpScout
+module Helpscout
   class Object
     include Enumerable
 
@@ -32,7 +32,7 @@ module HelpScout
     end
 
     def ==(other)
-      other.is_a?(HelpScout::Object) &&
+      other.is_a?(Helpscout::Object) &&
         @values == other.instance_variable_get(:@values)
     end
 
@@ -67,7 +67,7 @@ module HelpScout
           copy[k] = deep_copy(v)
           copy
         end
-      when HelpScout::Object
+      when Helpscout::Object
         obj.class.from(
           deep_copy(obj.instance_variable_get(:@values)),
           obj.instance_variable_get(:@opts)

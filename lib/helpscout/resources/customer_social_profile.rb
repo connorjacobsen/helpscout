@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module HelpScout
-  class CustomerSocialProfile < HelpScout::Resource
+module Helpscout
+  class CustomerSocialProfile < Helpscout::Resource
     OBJECT_NAME = 'customer.social-profile'
   end
 end

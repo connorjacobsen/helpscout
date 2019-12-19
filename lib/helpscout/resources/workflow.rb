@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-module HelpScout
-  class Workflow < HelpScout::Resource
-    include HelpScout::API::List
-    include HelpScout::API::Update
+module Helpscout
+  class Workflow < Helpscout::Resource
+    include Helpscout::API::List
+    include Helpscout::API::Update
 
     OBJECT_NAME = 'workflow'
   end

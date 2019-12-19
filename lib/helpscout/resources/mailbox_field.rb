@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module HelpScout
-  class MailboxField < HelpScout::Resource
+module Helpscout
+  class MailboxField < Helpscout::Resource
     OBJECT_NAME = 'mailbox.field'
   end
 end

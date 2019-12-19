@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe HelpScout::ListObject do
+RSpec.describe Helpscout::ListObject do
   describe 'enumerable' do
     subject { described_class.new([1, 2, 3]) }
 

@@ -4,7 +4,7 @@ RSpec.shared_examples_for 'nested_updatable' do
   let(:stubs) { Faraday::Adapter::Test::Stubs.new }
   let(:conn) { Faraday.new { |b| b.adapter(:test, stubs) } }
   let(:client) do
-    HelpScout::Client.new(
+    Helpscout::Client.new(
       client_id: 'client-id',
       client_secret: 'client-secret',
       cache: nil,

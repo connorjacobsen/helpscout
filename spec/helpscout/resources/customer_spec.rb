@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe HelpScout::Customer do
+RSpec.describe Helpscout::Customer do
   it_behaves_like 'retrievable' do
     let(:id) { 500 }
     let(:response_body) { ResponseLoader.load_json('get_customer') }
@@ -57,7 +57,7 @@ RSpec.describe HelpScout::Customer do
     let(:stubs) { Faraday::Adapter::Test::Stubs.new }
     let(:conn) { Faraday.new { |b| b.adapter(:test, stubs) } }
     let(:client) do
-      HelpScout::Client.new(
+      Helpscout::Client.new(
         client_id: 'client-id',
         client_secret: 'client-secret',
         cache: nil,
@@ -119,7 +119,7 @@ RSpec.describe HelpScout::Customer do
         expect(outcome).to be_success
 
         result = outcome.result
-        expect(result).to be_a(HelpScout::CustomerAddress)
+        expect(result).to be_a(Helpscout::CustomerAddress)
         expect(result.city).to eq('Dallas')
         expect(result.state).to eq('TX')
         expect(result.postal_code).to eq('74206')
@@ -164,7 +164,7 @@ RSpec.describe HelpScout::Customer do
   describe 'chats' do
     let(:parent_id) { 10 }
     let(:resource_name) { :chat }
-    let(:resource_class) { HelpScout::CustomerChat }
+    let(:resource_class) { Helpscout::CustomerChat }
     let(:resource_path) { 'chats' }
 
     it_behaves_like 'nested_listable' do
@@ -205,7 +205,7 @@ RSpec.describe HelpScout::Customer do
   describe 'emails' do
     let(:parent_id) { 10 }
     let(:resource_name) { :email }
-    let(:resource_class) { HelpScout::CustomerEmail }
+    let(:resource_class) { Helpscout::CustomerEmail }
     let(:resource_path) { 'emails' }
 
     it_behaves_like 'nested_listable' do
@@ -246,7 +246,7 @@ RSpec.describe HelpScout::Customer do
   describe 'phones' do
     let(:parent_id) { 10 }
     let(:resource_name) { :phone }
-    let(:resource_class) { HelpScout::CustomerPhone }
+    let(:resource_class) { Helpscout::CustomerPhone }
     let(:resource_path) { 'phones' }
 
     it_behaves_like 'nested_listable' do
@@ -287,7 +287,7 @@ RSpec.describe HelpScout::Customer do
   describe 'social profiles' do
     let(:parent_id) { 10 }
     let(:resource_name) { :social_profile }
-    let(:resource_class) { HelpScout::CustomerSocialProfile }
+    let(:resource_class) { Helpscout::CustomerSocialProfile }
     let(:resource_path) { 'social-profiles' }
 
     it_behaves_like 'nested_listable' do
@@ -328,7 +328,7 @@ RSpec.describe HelpScout::Customer do
   describe 'websites' do
     let(:parent_id) { 10 }
     let(:resource_name) { :website }
-    let(:resource_class) { HelpScout::CustomerWebsite }
+    let(:resource_class) { Helpscout::CustomerWebsite }
     let(:resource_path) { 'websites' }
 
     it_behaves_like 'nested_listable' do

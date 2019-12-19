@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    helpscout (0.1.0)
+    helpscout-api (0.1.0)
       faraday (>= 0.15.4)
       moneta (>= 1.1.1)
       redis (>= 3.3.5)
@@ -56,7 +56,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 2.0)
-  helpscout!
+  helpscout-api!
   pry (~> 0.12)
   rake (~> 10.0)
   rb-readline (~> 0.5)

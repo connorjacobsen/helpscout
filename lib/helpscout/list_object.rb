@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module HelpScout
+module Helpscout
   class ListObject
     include Enumerable
 

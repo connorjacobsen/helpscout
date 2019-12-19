@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module HelpScout
-  class CustomerAddress < HelpScout::Resource
+module Helpscout
+  class CustomerAddress < Helpscout::Resource
     OBJECT_NAME = 'customer.address'
   end
 end

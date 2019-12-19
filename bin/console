@@ -11,8 +11,8 @@ require 'helpscout'
 # require 'pry'
 # Pry.start
 
-HelpScout.client_id = ENV['APP_ID'] unless ENV['APP_ID'].nil?
-HelpScout.client_secret = ENV['APP_SECRET'] unless ENV['APP_SECRET'].nil?
+Helpscout.client_id = ENV['APP_ID'] unless ENV['APP_ID'].nil?
+Helpscout.client_secret = ENV['APP_SECRET'] unless ENV['APP_SECRET'].nil?
 
 require 'pry'
 Pry.start

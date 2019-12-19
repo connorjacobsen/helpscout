@@ -3,7 +3,7 @@
 require 'uri'
 require 'pry'
 
-RSpec.describe HelpScout::Middleware::TokenAuth do
+RSpec.describe Helpscout::Middleware::TokenAuth do
   def auth_header(env)
     env[:request_headers]['authorization']
   end
@@ -29,7 +29,7 @@ RSpec.describe HelpScout::Middleware::TokenAuth do
     let(:status) { 200 }
 
     before do
-      allow(HelpScout::AuthToken).to receive(:create)
+      allow(Helpscout::AuthToken).to receive(:create)
         .and_return([response, {}])
       allow(response).to receive(:success?).and_return(success)
       allow(response).to receive(:body).and_return(body)
@@ -47,7 +47,7 @@ RSpec.describe HelpScout::Middleware::TokenAuth do
         let(:status) { 401 }
 
         it 'raises an error' do
-          expect { request }.to raise_exception(HelpScout::ClientError)
+          expect { request }.to raise_exception(Helpscout::ClientError)
         end
       end
     end
@@ -65,7 +65,7 @@ RSpec.describe HelpScout::Middleware::TokenAuth do
 
       context 'cache hit' do
         it 'returns cached value' do
-          expect(HelpScout::AuthToken).not_to receive(:create)
+          expect(Helpscout::AuthToken).not_to receive(:create)
           cache.store(described_class::CACHE_KEY, token, expires: expiry)
 
           expect(auth_header(request)).to eq("Bearer #{token}")

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe HelpScout::Util do
+RSpec.describe Helpscout::Util do
   describe '.underscore' do
     it 'works' do
       expect(described_class.underscore('FooBar')).to eq('foo_bar')

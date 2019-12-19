@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module HelpScout
+module Helpscout
   # Abstract class that defines the Cache interface.
   class Cache
     private_class_method :new

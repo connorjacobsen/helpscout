@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe HelpScout::Response do
+RSpec.describe Helpscout::Response do
   let(:list_json) { ResponseLoader.load_json('list_mailboxes') }
   let(:get_json) { ResponseLoader.load_json('get_mailbox') }
 

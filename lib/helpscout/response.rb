@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module HelpScout
+module Helpscout
   class Response
     LOCATION_HEADER = 'location'
     RESOURCE_ID_HEADER = 'resource-id'
@@ -23,7 +23,7 @@ module HelpScout
       @pagination = parsed_body[:page]
 
       object_name = opts[:object]
-      @klass = HelpScout::Types.object_by_name(object_name) || HelpScout::Object
+      @klass = Helpscout::Types.object_by_name(object_name) || Helpscout::Object
 
       if success?
         @result = handle_success
@@ -64,7 +64,7 @@ module HelpScout
     end
 
     def handle_error
-      HelpScout::Errors.new(
+      Helpscout::Errors.new(
         @parsed_body[:message],
         @parsed_body[:logRef],
         @parsed_body.dig(:_embedded, :errors)
@@ -75,7 +75,7 @@ module HelpScout
     def build_links(links)
       return [] if links.nil?
 
-      links.map { |k, v| HelpScout::Link.new(Util.underscore(k.to_s).to_sym, v[:href]) }
+      links.map { |k, v| Helpscout::Link.new(Util.underscore(k.to_s).to_sym, v[:href]) }
     end
   end
 end

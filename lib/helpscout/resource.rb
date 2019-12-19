@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module HelpScout
-  class Resource < HelpScout::Object
-    extend HelpScout::API::Request
+module Helpscout
+  class Resource < Helpscout::Object
+    extend Helpscout::API::Request
 
     def self.class_name
       name.split('::')[-1]
@@ -29,7 +29,7 @@ module HelpScout
       define_singleton_method(name) do |id, params = {}, opts = {}|
         url = "#{resource_url}/#{id}/#{http_path}"
         resp, _opts = request(http_verb, url, params, opts)
-        HelpScout::Response.new(resp, object: object_name)
+        Helpscout::Response.new(resp, object: object_name)
       end
     end
 
@@ -46,7 +46,7 @@ module HelpScout
       define_singleton_method(name) do |params = {}, opts = {}|
         url = "#{resource_url}/#{http_path}"
         resp, _opts = request(http_verb, url, params, opts)
-        HelpScout::Response.new(resp, object: object_name)
+        Helpscout::Response.new(resp, object: object_name)
       end
     end
   end

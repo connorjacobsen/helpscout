@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe HelpScout::Team do
+RSpec.describe Helpscout::Team do
   it_behaves_like 'listable', filterable: true do
     let(:count) { 1 }
     let(:response_body) { ResponseLoader.load_json('list_teams') }
@@ -14,7 +14,7 @@ RSpec.describe HelpScout::Team do
     let(:stubs) { Faraday::Adapter::Test::Stubs.new }
     let(:conn) { Faraday.new { |b| b.adapter(:test, stubs) } }
     let(:client) do
-      HelpScout::Client.new(
+      Helpscout::Client.new(
         client_id: 'client-id',
         client_secret: 'client-secret',
         cache: nil,
@@ -47,7 +47,7 @@ RSpec.describe HelpScout::Team do
 
       outcome = described_class.list_members(id)
       expect(outcome).to be_success
-      expect(outcome.result.first).to be_a(HelpScout::User)
+      expect(outcome.result.first).to be_a(Helpscout::User)
     end
 
     it 'allows filters' do
@@ -61,7 +61,7 @@ RSpec.describe HelpScout::Team do
 
       outcome = described_class.list_members(id, page: 2)
       expect(outcome).to be_success
-      expect(outcome.result.first).to be_a(HelpScout::User)
+      expect(outcome.result.first).to be_a(Helpscout::User)
     end
   end
 end

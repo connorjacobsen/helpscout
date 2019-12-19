@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe HelpScout::Conversation do
+RSpec.describe Helpscout::Conversation do
   it_behaves_like 'retrievable' do
     let(:id) { 123 }
     let(:response_body) { ResponseLoader.load_json('get_conversation') }
@@ -63,14 +63,14 @@ RSpec.describe HelpScout::Conversation do
   describe 'attachments' do
     let(:parent_id) { 123 }
     let(:resource_name) { :attachment }
-    let(:resource_class) { HelpScout::ConversationAttachment }
+    let(:resource_class) { Helpscout::ConversationAttachment }
     let(:resource_path) { 'attachments' }
 
     describe 'custom methods' do
       let(:stubs) { Faraday::Adapter::Test::Stubs.new }
       let(:conn) { Faraday.new { |b| b.adapter(:test, stubs) } }
       let(:client) do
-        HelpScout::Client.new(
+        Helpscout::Client.new(
           client_id: 'client-id',
           client_secret: 'client-secret',
           cache: nil,
@@ -143,7 +143,7 @@ RSpec.describe HelpScout::Conversation do
   describe 'threads' do
     let(:parent_id) { 123 }
     let(:resource_name) { :thread }
-    let(:resource_class) { HelpScout::ConversationThread }
+    let(:resource_class) { Helpscout::ConversationThread }
     let(:resource_path) { 'threads' }
 
     it_behaves_like 'nested_listable' do
@@ -168,7 +168,7 @@ RSpec.describe HelpScout::Conversation do
     let(:stubs) { Faraday::Adapter::Test::Stubs.new }
     let(:conn) { Faraday.new { |b| b.adapter(:test, stubs) } }
     let(:client) do
-      HelpScout::Client.new(
+      Helpscout::Client.new(
         client_id: 'client-id',
         client_secret: 'client-secret',
         cache: nil,

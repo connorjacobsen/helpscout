@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe HelpScout::Webhook do
+RSpec.describe Helpscout::Webhook do
   let(:id) { 10 }
   let(:resource_id) { id }
   let(:first_id) { id }

@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-module HelpScout
-  class User < HelpScout::Resource
-    include HelpScout::API::Retrieve
-    include HelpScout::API::List
+module Helpscout
+  class User < Helpscout::Resource
+    include Helpscout::API::Retrieve
+    include Helpscout::API::List
 
     OBJECT_NAME = 'user'
 

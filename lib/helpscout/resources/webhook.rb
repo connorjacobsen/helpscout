@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-module HelpScout
-  class Webhook < HelpScout::Resource
-    include HelpScout::API::Retrieve
-    include HelpScout::API::List
-    include HelpScout::API::Create
-    include HelpScout::API::Update
-    include HelpScout::API::Delete
+module Helpscout
+  class Webhook < Helpscout::Resource
+    include Helpscout::API::Retrieve
+    include Helpscout::API::List
+    include Helpscout::API::Create
+    include Helpscout::API::Update
+    include Helpscout::API::Delete
 
     OBJECT_NAME = 'webhook'
   end

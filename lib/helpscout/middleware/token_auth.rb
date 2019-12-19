@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module HelpScout
+module Helpscout
   module Middleware
-    # Request middleware for fetching HelpScout credentials.
+    # Request middleware for fetching Helpscout credentials.
     class TokenAuth < Faraday::Middleware
       AUTH_HEADER = 'authorization'
       CACHE_KEY = 'helpscout-auth-token'
@@ -19,7 +19,7 @@ module HelpScout
       # @param env [Faraday::Env]
       def call(env)
         # Hack to skip this when we are requesting an auth token.
-        unless env.url.path == HelpScout::AuthToken::PATH
+        unless env.url.path == Helpscout::AuthToken::PATH
           env[:request_headers][AUTH_HEADER] = "Bearer #{auth_token}"
         end
 
@@ -37,11 +37,11 @@ module HelpScout
       end
 
       def fetch_auth_token
-        resp, _opts = HelpScout::AuthToken.create
-        outcome = HelpScout::Response.new(resp)
+        resp, _opts = Helpscout::AuthToken.create
+        outcome = Helpscout::Response.new(resp)
 
         unless outcome.success?
-          raise HelpScout::ClientError, 'Failed to fetch OAuth2 access token'
+          raise Helpscout::ClientError, 'Failed to fetch OAuth2 access token'
         end
 
         outcome.result.access_token.tap do |token|

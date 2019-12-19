@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe HelpScout::Cache::RedisCache do
+RSpec.describe Helpscout::Cache::RedisCache do
   let(:url) { 'redis://localhost:6380' }
   let(:cache) { described_class.new(url: url) }
   let(:redis_client) { double('Redis') }

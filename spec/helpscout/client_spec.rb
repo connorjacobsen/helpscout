@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe HelpScout::Client do
+RSpec.describe Helpscout::Client do
   let(:client_id) { 'some-client-id' }
   let(:client_secret) { 'some-client-secret' }
   let(:cache) { nil }
@@ -8,7 +8,7 @@ RSpec.describe HelpScout::Client do
   describe '#initialize' do
     it 'creates a new client with connection' do
       expect(Faraday::Connection).to receive(:new)
-        .with(HelpScout::DEFAULT_BASE_URI, headers: described_class::DEFAULT_HEADERS)
+        .with(Helpscout::DEFAULT_BASE_URI, headers: described_class::DEFAULT_HEADERS)
 
       client = described_class.new(
         client_id: client_id,

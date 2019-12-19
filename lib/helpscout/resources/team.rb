@@ -2,15 +2,15 @@
 
 require 'helpscout/resources/user'
 
-module HelpScout
-  class Team < HelpScout::Resource
-    include HelpScout::API::List
-    include HelpScout::API::NestedResource
+module Helpscout
+  class Team < Helpscout::Resource
+    include Helpscout::API::List
+    include Helpscout::API::NestedResource
 
     OBJECT_NAME = 'team'
 
     nested_resource_class_methods :member,
                                   operations: %i[list],
-                                  object_name: HelpScout::User::OBJECT_NAME
+                                  object_name: Helpscout::User::OBJECT_NAME
   end
 end

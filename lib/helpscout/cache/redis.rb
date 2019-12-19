@@ -2,11 +2,11 @@
 
 require 'redis'
 
-module HelpScout
+module Helpscout
   class Cache
     # Naming is a bit redundant, but allows us to avoid shadowing
     # the Redis client gem constants.
-    class RedisCache < HelpScout::Cache
+    class RedisCache < Helpscout::Cache
       public_class_method :new
 
       def initialize(opts)

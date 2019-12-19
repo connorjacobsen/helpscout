@@ -4,14 +4,14 @@ RSpec.shared_examples_for 'nested_creatable' do
   let(:stubs) { Faraday::Adapter::Test::Stubs.new }
   let(:conn) { Faraday.new { |b| b.adapter(:test, stubs) } }
   let(:client) do
-    HelpScout::Client.new(
+    Helpscout::Client.new(
       client_id: 'client-id',
       client_secret: 'client-secret',
       cache: nil,
       connection: conn
     )
   end
-  let(:location) { "#{HelpScout.base_uri}/#{path}/#{resource_id}" }
+  let(:location) { "#{Helpscout.base_uri}/#{path}/#{resource_id}" }
   let(:response_headers) do
     {
       'content-type' => 'application/hal+json;charset=UTF-8',

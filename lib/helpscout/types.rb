@@ -2,7 +2,7 @@
 
 # frozen_string_literal
 
-module HelpScout
+module Helpscout
   module Types
     OBJECT_TYPES = {
       Customer::OBJECT_NAME => Customer,

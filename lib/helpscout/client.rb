@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module HelpScout
+module Helpscout
   class Client
     attr_reader :base_uri, :cache, :client_id, :client_secret
 
@@ -11,7 +11,7 @@ module HelpScout
     # TODO: enable resetting of these values while in operation.
     #   Will require restarting any connections, etc.
     def initialize(base_uri: nil, cache:, client_id:, client_secret:, connection: nil)
-      @base_uri = base_uri || HelpScout::DEFAULT_BASE_URI
+      @base_uri = base_uri || Helpscout::DEFAULT_BASE_URI
       @cache = cache
       @client_id = client_id
       @client_secret = client_secret
@@ -43,7 +43,7 @@ module HelpScout
 
       # Faraday.new doesn't seem to pass in the `headers` properly.
       @connection = Faraday::Connection.new(@base_uri, headers: DEFAULT_HEADERS) do |builder|
-        builder.use HelpScout::Middleware::TokenAuth
+        builder.use Helpscout::Middleware::TokenAuth
 
         builder.adapter :net_http
       end

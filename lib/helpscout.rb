@@ -57,7 +57,7 @@ require 'helpscout/resources/workflow'
 
 require 'helpscout/types'
 
-module HelpScout
+module Helpscout
   DEFAULT_BASE_URI = 'https://api.helpscout.net'
 
   @base_uri = DEFAULT_BASE_URI
@@ -69,7 +69,7 @@ module HelpScout
   end
 
   def self.new_client
-    HelpScout::Client.new(
+    Helpscout::Client.new(
       base_uri: base_uri,
       cache: cache,
       client_id: client_id,

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module HelpScout
+module Helpscout
   module Util
     def self.underscore(str)
       str.gsub(/::/, '/')
@@ -11,7 +11,7 @@ module HelpScout
     end
 
     def self.to_object(data, opts = {})
-      klass = HelpScout::Types.object_names_to_classes.fetch(opts[:object], HelpScout::Object)
+      klass = Helpscout::Types.object_names_to_classes.fetch(opts[:object], Helpscout::Object)
 
       case data
       when Array
