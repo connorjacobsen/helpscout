@@ -38,6 +38,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'faraday', '>= 0.15.4'
+  spec.add_dependency 'moneta', '>= 1.1.1'
   spec.add_dependency 'redis', '>= 3.3.5'
 
   spec.add_development_dependency 'bundler', '~> 2.0'

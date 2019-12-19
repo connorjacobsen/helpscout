@@ -3,6 +3,7 @@ PATH
   specs:
     helpscout (0.1.0)
       faraday (>= 0.15.4)
+      moneta (>= 1.1.1)
       redis (>= 3.3.5)
 
 GEM
@@ -15,6 +16,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     jaro_winkler (1.5.4)
     method_source (0.9.2)
+    moneta (1.2.1)
     multipart-post (2.1.1)
     parallel (1.19.1)
     parser (2.6.5.0)

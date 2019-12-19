@@ -2,8 +2,9 @@
 
 require 'securerandom'
 
+require 'json'
+require 'moneta'
 require 'faraday'
-require 'pry'
 
 require 'helpscout/client'
 require 'helpscout/errors'
