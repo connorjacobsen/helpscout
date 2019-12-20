@@ -3,7 +3,7 @@ PATH
   specs:
     helpscout-api (0.1.0)
       faraday (>= 0.15.4)
-      moneta (>= 1.1.1)
+      moneta (>= 0.8.1)
       redis (>= 3.3.5)
 
 GEM
