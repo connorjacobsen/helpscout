@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
+require 'forwardable'
+
 module HelpScout
   class ListObject
     include Enumerable
+    extend Forwardable
 
     attr_reader :links
 
@@ -14,5 +17,7 @@ module HelpScout
     def each(&blk)
       @items.each(&blk)
     end
+
+    def_delegators :@items, :[], :last, :take
   end
 end

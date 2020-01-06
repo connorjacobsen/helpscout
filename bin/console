@@ -13,6 +13,7 @@ require 'helpscout'
 
 HelpScout.client_id = ENV['APP_ID'] unless ENV['APP_ID'].nil?
 HelpScout.client_secret = ENV['APP_SECRET'] unless ENV['APP_SECRET'].nil?
+HelpScout.cache = Moneta.new(:Redis, url: ENV['REDIS_URL']) unless ENV['REDIS_URL'].nil?
 
 require 'pry'
 Pry.start

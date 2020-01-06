@@ -10,6 +10,11 @@ module HelpScout
 
     OBJECT_NAME = 'customer'
 
+    # Customer resource uses `PUT` as the HTTP verb.
+    def self.update_verb
+      :put
+    end
+
     custom_resource_method :create_address,
                            http_verb: :post,
                            http_path: 'address',

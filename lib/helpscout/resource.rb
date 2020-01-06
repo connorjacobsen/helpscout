@@ -16,6 +16,10 @@ module HelpScout
       "#{self::OBJECT_NAME.downcase.tr('.', '/')}s"
     end
 
+    def self.update_verb
+      :patch
+    end
+
     def self.custom_resource_method(name, http_verb:, http_path: nil, object_name: nil)
       unless %i[get post patch put delete].include?(http_verb)
         raise ArgumentError,

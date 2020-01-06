@@ -5,7 +5,7 @@ module HelpScout
     module Update
       module ClassMethods
         def update(id, params = {}, opts = {})
-          r, _opts = request(:patch, "#{resource_url}/#{id}", params, opts)
+          r, _opts = request(update_verb, "#{resource_url}/#{id}", params, opts)
           HelpScout::Response.new(r, object: self::OBJECT_NAME)
         end
       end
