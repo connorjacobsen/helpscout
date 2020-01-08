@@ -7,11 +7,16 @@ module HelpScout
     include Enumerable
     extend Forwardable
 
+    # @return [Array] the pagination Links
     attr_reader :links
 
-    def initialize(items = [], links = [])
+    # @return [Object] the pagination information
+    attr_reader :page
+
+    def initialize(items = [], links = [], page = nil)
       @items = items
       @links = links
+      @page = page ? HelpScout::Object.from(page) : nil
     end
 
     def each(&blk)

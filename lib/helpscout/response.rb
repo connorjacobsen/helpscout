@@ -46,7 +46,7 @@ module HelpScout
           value.map { |item| @klass.from(item) }
         end
 
-        ListObject.new(objects, @links)
+        ListObject.new(objects, @links, @pagination)
       else
         @klass.from(@parsed_body)
       end

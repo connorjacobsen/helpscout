@@ -11,6 +11,7 @@ RSpec.shared_examples_for 'updatable' do
       connection: conn
     )
   end
+  let(:method) { :patch }
 
   before do
     allow(Faraday::Connection).to receive(:new).and_return(conn)
@@ -25,7 +26,7 @@ RSpec.shared_examples_for 'updatable' do
       ]
     end
 
-    stubs.patch("/v2/#{described_class.plural}/#{id}") do |env|
+    stubs.send(method, "/v2/#{described_class.plural}/#{id}") do |env|
       expect(env.body).to eq(JSON.generate(params))
       [
         204,

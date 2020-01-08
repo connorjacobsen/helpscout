@@ -35,6 +35,7 @@ RSpec.describe HelpScout::Customer do
 
   it_behaves_like 'updatable' do
     let(:id) { 101 }
+    let(:method) { :put }
     let(:params) do
       {
         first_name: 'Vernon',

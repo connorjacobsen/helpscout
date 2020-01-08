@@ -10,6 +10,7 @@ module HelpScout
         end
       end
 
+      # @api private
       def self.included(mod)
         mod.extend(ClassMethods)
       end

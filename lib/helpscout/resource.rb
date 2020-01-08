@@ -4,18 +4,22 @@ module HelpScout
   class Resource < HelpScout::Object
     extend HelpScout::API::Request
 
+    # @return [String] class name
     def self.class_name
       name.split('::')[-1]
     end
 
+    # @return [String] default URL for the resource
     def self.resource_url
       "/v2/#{plural}"
     end
 
+    # @return [String] default pluralization of the resource class name
     def self.plural
       "#{self::OBJECT_NAME.downcase.tr('.', '/')}s"
     end
 
+    # @return [Symbol] default HTTP verb used for the update function
     def self.update_verb
       :patch
     end
