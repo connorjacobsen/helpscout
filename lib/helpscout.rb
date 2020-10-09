@@ -5,6 +5,7 @@ require 'securerandom'
 require 'json'
 require 'moneta'
 require 'faraday'
+require 'faraday_middleware'
 
 require 'helpscout/client'
 require 'helpscout/errors'
