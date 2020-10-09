@@ -44,6 +44,7 @@ module HelpScout
       # Faraday.new doesn't seem to pass in the `headers` properly.
       @connection = Faraday::Connection.new(@base_uri, headers: DEFAULT_HEADERS) do |builder|
         builder.use HelpScout::Middleware::TokenAuth
+        builder.use FaradayMiddleware::FollowRedirects
 
         builder.adapter :net_http
       end

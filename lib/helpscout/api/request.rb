@@ -5,7 +5,7 @@ module HelpScout
     module Request
       def request(method, url, params = {}, opts = {})
         # Generate new client
-        client = HelpScout.new_client
+        client = opts[:client] || HelpScout.new_client
         additional_headers = opts[:headers] || {}
         headers = HelpScout::Client::DEFAULT_HEADERS.merge(additional_headers)
 

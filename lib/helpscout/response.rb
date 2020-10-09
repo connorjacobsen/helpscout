@@ -36,6 +36,10 @@ module HelpScout
       status >= 200 && status <= 399
     end
 
+    def raw_response
+      @response
+    end
+
     private
 
     def handle_success
